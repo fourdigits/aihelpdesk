@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:14-alpine
+    environment:
+      - POSTGRES_USER=aihelpdesk
+      - POSTGRES_PASSWORD=aihelpdesk
+      - POSTGRES_DB=aihelpdesk
+    ports:
+         - "5432:5432"
+    volumes:
+         - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata: {}

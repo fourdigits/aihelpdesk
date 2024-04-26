@@ -1,0 +1,8 @@
+{% extends "wagtail_helpdesk/base.html" %}
+{% load static i18n helpdesk_tags wagtailcore_tags wagtailsettings_tags manifest %}
+{% block css %}
+  <link rel="stylesheet"
+        href="{% versioned_static 'wagtail_helpdesk/main.css' %}">
+  <link rel="stylesheet"
+        href="{% manifest 'main.css' %}">
+{% endblock %}
