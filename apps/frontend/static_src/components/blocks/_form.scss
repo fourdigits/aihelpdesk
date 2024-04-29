@@ -1,0 +1,39 @@
+.form {
+  &::before {
+    background-color: $color-secondary-light;
+  }
+
+  .form__tag {
+    input {
+      &:checked ~ label {
+        background-color: $color-true-black;
+        color: $color-white;
+      }
+    }
+  }
+
+  .form__tip-text {
+    color: $color-true-black;
+  }
+
+  .form__link {
+    color: $color-true-black;
+  }
+
+  .form__form-fields {
+    .form-field {
+      input {
+        background-color: transparent;
+        border-bottom: 2px solid $color-true-black;
+      }
+    }
+  }
+
+  .form__error {
+    color: $color-primary-dark;
+  }
+
+  .errorlist {
+    color: $color-primary-dark;
+  }
+}

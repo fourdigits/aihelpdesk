@@ -1,0 +1,20 @@
+{% extends "wagtail_helpdesk/cms/general_page.html" %}
+
+{% block head %}
+  <div class="content-header">
+    <div class="content-header__wrapper">
+      <div class="content-header__title-container">
+        <h1 class="content-header__title">
+          {{ self.title }}
+        </h1>
+      </div>
+      {% if self.subtitle %}
+        <div class="content-header__introduction">
+          <p class="content-header__introduction-text">
+            {{ self.subtitle }}
+          </p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

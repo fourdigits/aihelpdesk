@@ -1,0 +1,13 @@
+.disclosure {
+  &::before {
+    background: $color-primary-light;
+  }
+
+  .disclosure__content {
+    color: $color-white;
+  }
+
+  .disclosure__disclosure {
+    color: $color-white;
+  }
+}

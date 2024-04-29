@@ -1,0 +1,9 @@
+.simple-header {
+  &::before {
+    background: linear-gradient(
+      to bottom,
+      rgba($color-primary-dark, 1),
+      rgba($color-secondary-dark, 1)
+    );
+  }
+}

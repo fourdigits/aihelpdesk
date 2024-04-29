@@ -1,0 +1,20 @@
+.footer-bar {
+  background-color: $color-true-black;
+
+  .footer-bar__title {
+    color: $color-white;
+
+    a {
+      color: $color-secondary-light;
+    }
+  }
+
+  .footer-bar__coc {
+    color: $color-white;
+  }
+
+  .footer-bar__link,
+  .footer-bar__title-link .footer-bar__title a {
+    color: $color-secondary-light;
+  }
+}

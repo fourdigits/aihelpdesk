@@ -1,0 +1,7 @@
+.social-share-buttons {
+  &__button {
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+}
