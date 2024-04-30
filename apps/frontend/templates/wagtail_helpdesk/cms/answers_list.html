@@ -1,0 +1,17 @@
+{% extends "wagtail_helpdesk/cms/answer_detail.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div class="question-link-list">
+      <div class="question-link-list__links">
+        {% for answer in answers_and_columns %}
+          {{ answer.get_as_overview_row_card }}
+        {% empty %}
+          <div class="question-link-list__no-results">
+            {% trans 'Unfortunately, no questions were found' %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+{% endblock %}

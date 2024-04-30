@@ -1,0 +1,22 @@
+{% extends "wagtail_helpdesk/cms/home_page.html" %}
+{% load i18n %}
+{% block content %}
+  <main class="section">
+    <div class="question-link-list">
+      <h4 class="question-link-list__title no-border">{% trans "Recent questions" %}</h4>
+
+      <div class="question-link-list__links">
+        {% for answer in featured_answers %}
+          {% include "wagtail_helpdesk/core/includes/answer_home_block.html" with object=answer %}
+        {% endfor %}
+      </div>
+
+      <div class="question-link-list__button">
+        {% include "wagtail_helpdesk/core/includes/button_list.html" with stream=page.recent_question_buttons %}
+      </div>
+    </div>
+
+    {% include "wagtail_helpdesk/includes/social_share_buttons.html" %}
+    {% include "wagtail_helpdesk/cms/includes/about_footer.html" %}
+  </main>
+{% endblock %}
