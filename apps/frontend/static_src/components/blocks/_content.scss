@@ -1,0 +1,5 @@
+.content {
+  &::before {
+    height: calc(100% + 300px);
+  }
+}
