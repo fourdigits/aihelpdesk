@@ -1,0 +1,114 @@
+{% extends "wagtail_helpdesk/base.html" %}
+{% load static i18n wagtailcore_tags %}
+
+{% block smokedglass %}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="form">
+
+    <div class="form__wrapper">
+
+      {% if answer %}
+        <div class="form__header__container">
+          <h1
+            class="form__header form-step__one">{% trans 'Please fill out the form to leave feedback' %}</h1>
+        </div>
+        <form class="form__form" method="post" novalidate>
+          {% csrf_token %}
+
+          {{ form.non_field_errors }}
+
+          {{ form.source.errors }}
+          {{ form.source }}
+
+          <div class="">
+            <div class="form__form-subtitle">
+              <span>{% trans 'I have a question about' %}:</span>
+            </div>
+            <div class="help-text">
+              {% trans "Please check if this is the correct article" %}
+            </div>
+            <div class="form__answer-details">
+              {{ answer.get_as_overview_row_card }}
+            </div>
+            <div class="form__form-fields">
+              <div class="form-field">
+                {{ form.feedback.label_tag }}
+                <div class="help-text">
+                  {{ form.feedback.help_text }}
+                </div>
+                {{ form.feedback.errors }}
+                {{ form.feedback }}
+              </div>
+
+              <div class="form-field">
+                {{ form.grade.label_tag }}
+                <div class="help-text">
+                  {{ form.grade.help_text }}
+                </div>
+                {{ form.grade.errors }}
+                {{ form.grade }}
+              </div>
+
+              <div class="form-field">
+                {{ form.reliability_grade.label_tag }}
+                <div class="help-text">
+                  {{ form.reliability_grade.help_text }}
+                </div>
+                {{ form.reliability_grade.errors }}
+                {{ form.reliability_grade }}
+              </div>
+
+              <div class="form-field">
+                {{ form.user_name.label_tag }}
+                <div class="help-text">
+                  {{ form.user_name.help_text }}
+                </div>
+                {{ form.user_name.errors }}
+                {{ form.user_name }}
+              </div>
+
+              <div class="form-field">
+                {{ form.user_email.label_tag }}
+                <div class="help-text">
+                  {{ form.user_email.help_text }}
+                </div>
+                {{ form.user_email.errors }}
+                {{ form.user_email }}
+              </div>
+
+              <div class="form-field">
+                {{ form.user_age.label_tag }}
+                <div class="help-text">
+                  {{ form.user_age.help_text }}
+                </div>
+                {{ form.user_age.errors }}
+                {{ form.user_age }}
+              </div>
+            </div>
+
+            <div class="form__button">
+              <button id="form-step__continue" class="button">
+                <span class="button__text">{% trans 'Submit' %}</span>
+                <span class="button__icon"></span>
+              </button>
+            </div>
+          </div>
+        </form>
+      {% else %}
+        <div class="form__header__container">
+          <h1
+            class="form__header form-step__one">{% trans 'No specific answer has been selected, please go to the answer and use the feedback link.' %}</h1>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% include "wagtail_helpdesk/includes/social_share_buttons.html" %}
+
+{% endblock %}
+

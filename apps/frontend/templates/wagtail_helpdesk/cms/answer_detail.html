@@ -1,0 +1,23 @@
+{% extends "wagtail_helpdesk/cms/answer_detail.html" %}
+{% load i18n static wagtailcore_tags wagtailimages_tags %}
+{% wagtail_site as current_site %}
+
+{% block content %}
+  {% for block in self.page_content %}
+    {% include_block block %}
+  {% endfor %}
+  {% include "feedback/partials/feedback_request.html" with answer_id=page.id %}
+  {% include "wagtail_helpdesk/includes/social_share_buttons.html" %}
+
+  {% for block in self.answer_origin %}
+    {% include_block block %}
+  {% endfor %}
+
+  {% for block in self.related_items %}
+    {% include_block block %}
+  {% endfor %}
+
+{% endblock %}
+
+
+

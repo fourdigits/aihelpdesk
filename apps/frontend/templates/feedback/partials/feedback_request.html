@@ -1,0 +1,12 @@
+{% load i18n wagtailroutablepage_tags feedback_tag %}
+
+{% get_feedback_page as feedback_page %}
+
+
+<div class="feedback-request">
+  <p>
+    {% trans "What did you think of this answer?" %} <a
+    href="{% routablepageurl feedback_page "form" answer_id=answer_id %}"
+    class="link">{% trans "Give us your opinion" %}</a>
+  </p>
+</div>
