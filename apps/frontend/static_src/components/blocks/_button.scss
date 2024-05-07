@@ -1,0 +1,17 @@
+.button {
+  background-color: $color-primary-dark;
+
+  &:hover {
+    background-color: $color-primary-light;
+    color: $color-true-black;
+  }
+}
+
+.button--secondary {
+  background-color: transparent;
+
+  &:hover {
+    background-color: $color-secondary-dark;
+    border: 1px solid $color-secondary-dark;
+  }
+}

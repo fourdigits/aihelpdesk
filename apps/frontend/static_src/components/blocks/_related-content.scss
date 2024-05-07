@@ -1,0 +1,18 @@
+.related-content {
+  background: linear-gradient(
+    to bottom,
+    rgba($color-primary-light, 1),
+    rgba($color-secondary-light, 1)
+  );
+
+  .tag {
+    color: $color-true-black;
+    background-color: transparent;
+    border: 1px solid $color-true-black;
+
+    &:hover {
+      background-color: $color-true-black;
+      color: $color-white;
+    }
+  }
+}

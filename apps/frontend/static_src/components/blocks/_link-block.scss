@@ -1,0 +1,5 @@
+.link-block {
+  &::before {
+    background-color: $color-secondary-light;
+  }
+}

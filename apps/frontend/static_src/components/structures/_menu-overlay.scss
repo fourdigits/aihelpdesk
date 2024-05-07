@@ -1,0 +1,67 @@
+.menu-overlay {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: $color-true-black;
+
+  &::after {
+    background-color: $color-primary-light;
+  }
+
+  .menu-overlay__link {
+    color: $color-true-black;
+  }
+}
+
+.menu-overlay__buttons {
+  flex-direction: column !important;
+}
+
+.menu-button {
+  color: white;
+  background-color: black;
+
+  &:hover {
+    color: $color-primary-light;
+
+    svg {
+      fill: $color-primary-light;
+    }
+  }
+
+  svg {
+    fill: white;
+  }
+
+  &:last-child {
+    color: white;
+    background-color: black;
+
+    &:hover {
+      color: $color-primary-light;
+
+      svg {
+        fill: $color-primary-light;
+      }
+    }
+
+    svg {
+      fill: white;
+    }
+  }
+
+  &:first-child {
+    color: white;
+    background-color: black;
+
+    &:hover {
+      color: $color-primary-light;
+
+      svg {
+        fill: $color-primary-light;
+      }
+    }
+
+    svg {
+      fill: white;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.footer {
+  &::before {
+    background: linear-gradient(
+      to bottom,
+      rgba($color-primary-light, 1),
+      rgba($color-secondary-light, 1)
+    );
+  }
+}
